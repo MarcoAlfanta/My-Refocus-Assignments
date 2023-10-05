@@ -1,0 +1,35 @@
+.Pstyle1{
+    display: flex;
+    justify-content:center;
+}
+.style1{
+    width: 150px; 
+    height: 150px; 
+    background-color: aqua;
+}
+.Pstyle2{
+    height: 400px;
+    border: 5px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.style2{
+    width: 150px; 
+    height: 150px; 
+    background-color: bisque;
+}
+
+
+.Pstyle3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+}
+.style3{
+    width: 150px; 
+    height: 150px; 
+    background-color: blueviolet;
+}

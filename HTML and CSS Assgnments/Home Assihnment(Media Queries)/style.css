@@ -1,0 +1,28 @@
+
+@media only screen and (min-width:689px){
+    .Mobile{
+        
+        display: none;
+    }
+}
+@media only screen and (max-width:767px){
+    .Tablet{
+        display: none;
+        
+    }
+
+}
+@media only screen and (min-width:1023px){
+    .Tablet{
+        display: none;
+        
+    }
+
+}
+@media only screen and (max-width:1023px){
+    .PC{
+        display: none;
+        
+    }
+
+}

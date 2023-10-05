@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Registration Form</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Vaccination Registration Form</h1>
+        <form id="registrationForm" action="#" method="post">
+            <label for="First Name">First Name:</label>
+            <input type="text" id="First Name" name="First Name" required>
+
+            <label for="Middle Name">Middle Name:</label>
+            <input type="text" id="Middle Name" name="Middle Name" required>
+
+            <label for="Last Name">Last Name:</label>
+            <input type="text" id="Last Name" name="Last Name" required>
+
+            <label for="Birthday">Birthday:</label>
+            <input type="date" id="Birthday" name="Birthday" required>
+
+            <label for="Email">Email:</label>
+            <input type="Email" id="Email" name="Email" required>
+
+            <label for="Region">Region:</label>
+            <select id="Region" name="Region">
+                <option value="Region I">Region I — Ilocos Region</option>
+                <option value="Region II">Region II — Cagayan Valley</option>
+                <option value="Region III">Region III — Central Luzon</option>
+                <option value="Region IV-A">Region IV-A — Calabarzon</option>
+                <option value="Mimaropa Region">Mimaropa Region</option>
+                <option value="Region V">Region V-Bicol Region</option>
+                <option value="Region VI">Region VI-Western Visayas</option>
+                <option value="Region VII">Region VII-Central Visayas</option>
+                <option value="Region VIII">Region VIII-Eastern Visayas</option>
+                <option value="Region IX">Region IX-Zamboanga Peninsula</option>
+                <option value="Region X">Region X-Northern Mindanao</option>
+                <option value="Region XI">Region XI-Davao Region</option>
+                <option value="Region XII">Region XII-SOCCSKSARGEN</option>
+                <option value="Region XIII">Region XIII-Caraga</option>
+                <option value="NCR">National Capital Region</option>
+                <option value="CAR">Cordillera Administrative Region</option>
+                <option value="BARMM">Bangsamoro Autonomous Region in Muslim Mindanao</option>
+                <!-- Add other region options here -->
+            </select>
+
+            <label for="Province">Province:</label>
+            <input type="text" id="Province" name="Province" required>
+
+            <label for="Barangay">Barangay:</label>
+            <input type="text" id="Barangay" name="Barangay" required>
+
+            <label for="Street">Street:</label>
+            <input type="text" id="Street" name="Street" required>
+
+            <div class="form-group">
+                <label for="Male">Male</label>
+                <input type="radio" id="Male" name="gender" value="Male">
+              </div>
+              
+              <div class="form-group">
+                <label for="Female">Female</label>
+                <input type="radio" id="Female" name="gender" value="Female">
+              </div>
+              
+              <div class="form-group">
+                <label for="Other">Other</label>
+                <input type="radio" id="Other" name="gender" value="Other">
+                
+              </div>
+        
+            <label for="Vaccine BrandDose1">Vaccination Brand (Dose 1):</label>
+            <select id="Vaccine BrandDose1" name="Vaccine BrandDose1" required>
+                <option value="Pfizer-BioNTech">Pfizer-BioNTech</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+                <option value="Coronavac">Coronavac</option>
+                <option value="Sputnik V">Sputnik V</option>
+                <option value="Janssen">Janssen</option>
+                <option value="Covaxin">Covaxin</option>
+                <option value="Moderna">Moderna</option>
+                <option value="Sinopharm">Sinopharm</option>
+                <option value="Covovax">Covovax</option>
+                <!-- Add other vaccine brand options here -->
+                
+            </select>
+
+            <label for="Date of Vaccination Dose1">Date of Vaccination (Dose 1):</label>
+            <input type="date" id="Date of Vaccination Dose1" name="Date of Vaccination Dose1" required>
+
+            <label for="Vaccination site Dose1">Vaccination (Dose 1) Site:</label>
+            <input type="text" id="Vaccination site Dose1" name="Vaccination site Dose1" required>
+
+            <label for="secondDose">Did you already get your second vaccination?</label><br>
+            <div class="form-group">
+            <input type="radio" id="yes" name="secondDose" value="Yes" required>
+            <label for="yes">Yes</label><br>
+        </div>
+        <div class="form-group">
+            <input type="radio" id="no" name="secondDose" value="No" required>
+            <label for="no">No</label><br>
+        </div>
+            <div class="options">
+                <label for="Vaccine Brand Dose2">Vaccination Brand (Dose 2):</label>
+                <select id="Vaccine Brand Dose2" name="Vaccine Brand Dose2">
+                    <option value="Pfizer-BioNTech">Pfizer-BioNTech</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Coronavac">Coronavac</option>
+                    <option value="Sputnik V">Sputnik V</option>
+                    <option value="Janssen">Janssen</option>
+                    <option value="Covaxin">Covaxin</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Sinopharm">Sinopharm</option>
+                    <option value="Covovax">Covovax</option>
+                    <!-- Add other vaccine brand options here -->
+                </select>
+
+                <label for="Date of Vaccination Dose2">Date of Vaccination (Dose 2):</label>
+                <input type="date" id="Date of Vaccination Dose2" name="Date of Vaccination Dose2">
+
+                <label for="Vaccination Site Dose2">Vaccination (Dose 2) Site:</label>
+                <input type="text" id="Vaccination Site Dose2" name="Vaccination Site Dose2">
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function showAnswers() {
+            const form = document.getElementById('registrationForm');
+            const answersDiv = document.getElementById('answers');
+            const formData = new FormData(form);
+            let answersHTML = '<h2>Your Answers:</h2>';
+    
+            for (const [key, value] of formData.entries()) {
+                answersHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+            }
+    
+            answersDiv.innerHTML = answersHTML;
+            answersDiv.style.display = 'block';
+        }
+    
+        // JavaScript code for conditional display as provided earlier
+    
+        const submitButton = document.querySelector('input[type="submit"]');
+        submitButton.addEventListener('click', showAnswers);
+    </script>
+    <div class="container2">
+    <div id="answers" style="display: none;">
+        <!-- User's answers will be displayed here -->
+    </div>
+    </div>
+</body>
+</html>

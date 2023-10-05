@@ -1,0 +1,68 @@
+// main.scss
+
+@import 'variables';
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 50px;
+  place-items: center;
+}
+
+.triangle-left {
+  @include triangle-left(100px, 100px, $blue);
+ 
+}
+
+.triangle-up {
+  @include triangle-up(100px, 100px, $orange);
+}
+
+.triangle-down {
+  @include triangle-down(100px, 100px, $red);
+}
+
+.triangle-right {
+  @include triangle-right(100px, 100px, $green);
+}
+
+.ellipse-horizontal {
+  @include ellipse(180px, 90px);
+}
+
+.ellipse-vertical {
+  @include ellipse(90px, 180px);
+}
+
+.rectangle-horizontal {
+  @include rectangle(120px, 80px);
+}
+
+.rectangle-vertical {
+  @include rectangle(80px, 120px);
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.red {
+  background-color: $red;
+}
+
+.green {
+  background-color: $green;
+}
+
+.blue {
+  background-color: $blue;
+}

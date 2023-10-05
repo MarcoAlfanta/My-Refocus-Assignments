@@ -1,0 +1,15 @@
+.text{
+    border:1px solid gray;
+    padding:16px 16px;
+    height: 400px;
+    width: 400px;
+}
+
+.text-title{
+    color:black;
+    margin-bottom: 14px;
+}
+.text-paragraph{
+    color:red;
+    padding-right: 38px;
+}

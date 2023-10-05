@@ -1,0 +1,44 @@
+// mixins.scss
+
+@mixin triangle-left($width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-top: $height solid transparent;
+  border-bottom: $height solid transparent;
+  border-right: $width solid $color;
+}
+@mixin triangle-right($width, $height, $color) {
+    width: 0;
+    height: 0;
+    border-top: $height solid transparent;
+    border-bottom: $height solid transparent;
+    border-left: $width solid $color;
+  }
+
+
+@mixin triangle-up($width, $height, $color) {
+    width: 0;
+    height: 0;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $height solid $color;
+  }
+
+  @mixin triangle-down($width, $height, $color) {
+    width: 0;
+    height: 0;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $height solid $color;
+  }
+
+@mixin ellipse($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+@mixin rectangle($width, $height) {
+  width: $width;
+  height: $height;
+}

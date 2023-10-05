@@ -1,0 +1,1 @@
+console.log("5 reason to go into Web Development 1.Web development are in Demand 2. Web development Earn a Great living 3. Web Developers Have Diverse Opportunities 4. Web Developers Get to be Creative 5. Web Developers Have Flexibility")
